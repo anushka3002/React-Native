@@ -1,7 +1,8 @@
 import React from "react"
 import {File} from "./src/file"
-import {View,Text,StyleSheet} from "react-native"
+import {View,Text,StyleSheet, Button, Alert, TouchableOpacity, Linking} from "react-native"
 import { Flat } from "./src/new"
+import { CardDetails } from "./src/cardDetails"
 
 const App=()=>{
   const Name="Anushka"
@@ -18,6 +19,17 @@ const App=()=>{
       {/* importing the File and Flat component in line 20 and 21 from the File file from src same as react*/}
       <File/>
       <Flat/>
+      <Button title="Join Discord server now"
+      onPress={()=>{Linking.openURL("https://www.w3schools.com/html/")}} 
+      // disabled
+
+      />
+      <TouchableOpacity
+      onPress={()=>{console.log("Touchable")}} 
+      >
+        <Text>hello</Text>
+      </TouchableOpacity>
+      {/* <CardDetails textData={"Hello this is prop"} img={"https://images.pexels.com/photos/850359/pexels-photo-850359.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}/> */}
     </View>
      
     )
